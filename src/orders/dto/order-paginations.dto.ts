@@ -1,6 +1,7 @@
 import { IsEnum, IsOptional } from 'class-validator';
 import { OrderStatusList } from '../enum/order.enum';
-import { PaginationDto } from 'src/common/dto';
+
+import { PaginationDto } from 'src/common/dto/pagination.dto';
 import { OrderStatus } from 'src/generated/prisma/enums';
 
 export class OrderPaginationDto extends PaginationDto {
@@ -10,4 +11,3 @@ export class OrderPaginationDto extends PaginationDto {
   })
   status!: OrderStatus;
 }
-

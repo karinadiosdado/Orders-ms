@@ -1,9 +1,9 @@
 import { IsEnum, IsUUID } from 'class-validator';
-import { OrderStatus } from 'src/generated/prisma/enums';
 import { OrderStatusList } from '../enum/order.enum';
+import { OrderStatus } from 'src/generated/prisma/enums';
 
 export class ChangeOrderStatusDto {
-  @IsUUID(4)
+  @IsUUID()
   id!: string;
 
   @IsEnum(OrderStatusList, {
